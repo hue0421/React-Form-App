@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Array.from 은 배열을 리턴한다.
+      let a = Array.from([1, 2, 3], (x) => x * 155); //얕은 복사
+      console.log(a);
+
+      let b = Array.from("foooooooooooooo");
+      console.log(b);
+
+      function hello() {}
+
+      let c = Array.from({ length: 3 }, () => createRef());
+      console.log(c);
+
+      //React 에서는 무조건 깊은복사를 써야한다.
+      let d = Array.from({ length: 4 }).map(() => hello); //깊은 복사
+      console.log(d);
+    </script>
+  </body>
+</html>

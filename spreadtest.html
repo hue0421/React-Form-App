@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let list = [1, 2, 3, 4, 5];
+
+      console.log(list);
+      console.log(...list);
+
+      let list2 = [...list];
+      console.log(list2);
+
+      let list3 = [...list, 6];
+      console.log(list3);
+
+      let list4 = [...list.slice(0, 2), 6, ...list.slice(2, 5)];
+      console.log(list4);
+
+      let user = {
+        id: 1,
+        name: "ssar",
+      };
+      let newUser = { ...user, name: "cos" }; //name: ssar 에서 cos로 바뀜
+      console.log(newUser);
+
+      let newUser2 = { ...newUser, id: 3 }; //name: ssar 에서 cos로 바뀜
+      console.log(newUser2);
+    </script>
+  </body>
+</html>
